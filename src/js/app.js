@@ -7,5 +7,4 @@ export default function getHealthLevel(person) {
   return 'critical';
 }
 
-
-console.log(getHealthLevel({name: 'Маг', health: 90}))
+console.log(getHealthLevel({ name: 'Маг', health: 90 }));
