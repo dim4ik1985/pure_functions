@@ -1,6 +1,16 @@
-import multiplication from '../basic';
+import getHealthLevel from '../app';
 
-test('should multiplication', () => {
-  const result = [2, 2];
-  expect(multiplication(result)).toBe(4);
+test('health check', () => {
+  const result = { name: 'Маг', health: 90 };
+  expect(getHealthLevel(result)).toBe('healthy');
+});
+
+test('health check', () => {
+  const result = { name: 'Маг', health: 40 };
+  expect(getHealthLevel(result)).toBe('wounded');
+});
+
+test('health check', () => {
+  const result = { name: 'Маг', health: 5 };
+  expect(getHealthLevel(result)).toBe('critical');
 });
