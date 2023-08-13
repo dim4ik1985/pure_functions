@@ -12,12 +12,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/i,
+        test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
       },
       {
-        test: /\.css$/i, // Регулярное выражение для обработки файлов с расширением .css
+        test: /\.css$/, // Регулярное выражение для обработки файлов с расширением .css
         use: [MiniCssExtractPlugin.loader, 'css-loader'], // Загрузчики, используемые для обработки CSS-файлов
       },
     ],
